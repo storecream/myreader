@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PageSpeaker – Milestone 1</title>
+  <!-- inside <head> ... -->
+<style>
+  .preview {
+    min-height: 120px; padding: 12px; margin-top: 10px;
+    border: 1px dashed #888; border-radius: 10px; line-height: 1.7;
+  }
+ max-height: 40vh;
+  overflow: auto;
+  .preview .w { padding: 2px 3px; border-radius: 6px; }
+  .preview .a { background: rgba(124,58,237,.25); outline: 1px solid rgba(124,58,237,.35); }
+</style>
+
+</head>
+<body>
+  <h1>PageSpeaker v2 – Test</h1>
+
+  <label>Voice: <select id="voice"></select></label><br><br>
+  <label>Rate: <input id="rate" type="range" min="0.5" max="2" step="0.1" value="1"></label>
+  <span id="rateVal">1.0</span><br>
+  <label>Pitch: <input id="pitch" type="range" min="0" max="2" step="0.1" value="1"></label>
+  <span id="pitchVal">1.0</span><br>
+  <label>Volume: <input id="volume" type="range" min="0" max="1" step="0.1" value="1"></label>
+  <span id="volumeVal">1.0</span><br><br>
+
+  <textarea id="text" rows="6" cols="40" placeholder="Type something..."></textarea><br><br>
+<!-- somewhere under your textarea/buttons in <body> -->
+<h3>Live Highlight</h3>
+<div id="preview" class="preview"></div>
+
+  <button id="speak">Speak</button>
+  <button id="pause">Pause</button>
+  <button id="resume">Resume</button>
+  <button id="stop">Stop</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
